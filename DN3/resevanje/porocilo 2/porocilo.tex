@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+
+\input{config.tex}
+\usepackage{layouts}
+\usepackage{titlesec} 
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	basicstyle=\small, 
+	language=python, 
+	breaklines, tabsize=2, 
+	frame=leftline,xleftmargin=10pt,xrightmargin=10pt,framesep=10pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jernej Jezeršek}
+\lhead{Uvod v odkrivanje znanj iz podatkov}
+\rfoot{\thepage}
+
+
+\begin{document}
+
+{\huge Domača naloga 4} \\
+{\Huge \textbf{Avtobusi LPP s poljubnimi\\ metodami}} \\
+
+\section*{Tekmovanje}
+
+Preiskusil sem različne modele iz knjižnice \textit{Scykit Learn}. Najboljše rezultate sem dosegel z \texttt{RandomForestRegressor}.
+
+Za vsako linijo sem naredil en model z naslednjimi atributi:
+\begin{itemize}
+	\item \textbf{Voznik} - celo število
+	\item \textbf{Dan v tednu} - celo število
+	\item \textbf{Mesec} - celo število
+	\item \textbf{Temperature pod ničlo} - binarno ena značilka
+	\item \textbf{Šolske počitnice} - binarno, ena značilka
+	\item \textbf{Prosti dan (praznik ali konec tedna)} - binarno, ena značilka
+	\item \textbf{Dež (količina padavin v mm)} - število
+	\item \textbf{Sekunda v dnevu} - zakodirano kot 2d točka na enotski krožnici, kjer kot predstavlja čas \textit{(na ta način se ohrani podobnost med začetkom in koncem dneva)}
+	\item \textbf{Dan v letu} - zakodirano kot 2d točka na krožnici
+\end{itemize}
+
+
+\subsubsection*{Rezultati}
+\begin{center}
+	\begin{tabular}{c | c | c}
+		\textit{program} & \textit{datoteka z napovedjo} & \textit{rezultat na lestvici} \\ \hline
+		\texttt{tekmovanje.py} & \texttt{tesult\_t3\_7.txt} & 156.95223 
+	\end{tabular}
+\end{center}
+
+\end{document}

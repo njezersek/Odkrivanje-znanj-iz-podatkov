@@ -1,0 +1,14 @@
+Priprava značilk slik. (10/10)
+Priprava značilk slik. Namesto verzije mreže 1.1 ste uporabili 1.0. (-1)
+Učinkovita kosinusna razdalja za terke. (10/10)
+K-medoids. (20/20)
+Vaša silhueta za več skupin ne deluje pravilno. Narobe izračunate b. Za b se izračuna b do vseh clustrov in nato izbere najmanjšega. (10/20)
+Silhueta skupine z enim elementom mora biti (po definiciji) enaka 0. Sicer silhueta preferira rezultate z veliko skupinami. (-3)
+Pri silhueti bi morali del a deliti s številom razdalj do ostalih elementov, ne z velikostjo clustra. (-2)
+Zanimivost nabora podatkov. (5/5)
+Predstavitev podatkov in rezultatov. (20/25)
+Predstavitev. Porabili ste preveč prostora (ni ena stran).
+Utemeljitev števila skupin: pri tem ste uporabljali poznavanje podatkov in silhueto oziroma ste komentirali kakovost rezultatov pri različnem številu skupin. (10/10)
+Točke: 79.
+Ocenjevanje: <50: 0, <61: 6, <72: 7, <82: 8, <92: 9, >=92: 10
+Ocena: 8.

@@ -1,0 +1,9 @@
+Predtekmovanje končni: 121.420, 13. mesto (lestvica: 133.732)
+Oddali ste dobro predtekmovalno oddajo z linearno regresijo. (+20)
+Tekmovanje končni: 328.395, 59. mesto (lestvica: 306.245)
+Točkovanje kakovosti napovedi: točka za vsako sekundo pod 230 na tekmovanju.
+Imeli ste boljšo oddajo z 2022-04-12 22:30:21 (na lestvico): 178.114, (lestvica: 176.863)
+Točke za rezultat 178.114. (+51)
+Točke: 71.
+Ocenjevanje: <35: 0, <50: 6, <63: 7, <78: 8, <90: 9, >=90: 10
+Ocena: 8.

@@ -1,0 +1,168 @@
+%% Creator: Matplotlib, PGF backend
+%%
+%% To include the figure in your LaTeX document, write
+%%   \input{<filename>.pgf}
+%%
+%% Make sure the required packages are loaded in your preamble
+%%   \usepackage{pgf}
+%%
+%% and, on pdftex
+%%   \usepackage[utf8]{inputenc}\DeclareUnicodeCharacter{2212}{-}
+%%
+%% or, on luatex and xetex
+%%   \usepackage{unicode-math}
+%%
+%% Figures using additional raster images can only be included by \input if
+%% they are in the same directory as the main LaTeX file. For loading figures
+%% from other directories you can use the `import` package
+%%   \usepackage{import}
+%%
+%% and then include the figures with
+%%   \import{<path to file>}{<filename>.pgf}
+%%
+%% Matplotlib used the following preamble
+%%
+\begingroup%
+\makeatletter%
+\begin{pgfpicture}%
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{7.750000in}{2.404196in}}%
+\pgfusepath{use as bounding box, clip}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{7.750000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{7.750000in}{2.404196in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{2.404196in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{0.000000in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{0.000000in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img0.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.472561in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.71}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{1.134146in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{1.134146in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img1.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=1.606707in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.68}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{2.268293in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{2.268293in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img2.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.740854in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.68}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{3.402439in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{3.402439in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img3.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=3.875000in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.68}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{4.536585in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{4.536585in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img4.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=5.009146in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.67}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{5.670732in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{5.670732in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img5.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=6.143293in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.65}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{6.804878in}{1.260000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{6.804878in}{1.260000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img6.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=7.277439in,y=2.288455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.64}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{0.000000in}{0.000000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{0.000000in}{0.000000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img7.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.472561in,y=1.028455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.58}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{1.134146in}{0.000000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{1.134146in}{0.000000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img8.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=1.606707in,y=1.028455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.49}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{2.268293in}{0.000000in}}{\pgfqpoint{0.945122in}{0.945122in}}%
+\pgfusepath{clip}%
+\pgfsys@transformshift{2.268293in}{0.000000in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=true,width=0.950000in,height=0.950000in]{cluster2-img9.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.740854in,y=1.028455in,,base]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont 0.36}%
+\end{pgfscope}%
+\end{pgfpicture}%
+\makeatother%
+\endgroup%

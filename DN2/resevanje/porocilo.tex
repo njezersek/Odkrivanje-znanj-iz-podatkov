@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+
+\input{config.tex}
+\usepackage{layouts}
+\usepackage{titlesec} 
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	basicstyle=\small, 
+	language=python, 
+	breaklines, tabsize=2, 
+	frame=leftline,xleftmargin=10pt,xrightmargin=10pt,framesep=10pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jernej Jezeršek}
+\lhead{Uvod v odkrivanje znanj iz podatkov}
+\rfoot{\thepage}
+
+
+\begin{document}
+
+{\huge Domača naloga 2} \\
+{\Huge \textbf{Projekcije v nižjedimenzionalne prostore}} \\
+
+
+Spodaj so prikazani rezultati vseh treh metod. Jeziki sp pobarvani glede na 
+skupino kateri pripadajo (slovanski - zelena, germanski - modra, romanski - oranžna, ostalo - vijolična).
+
+\textbf{Komentar:} 
+Pri PCA je več prekrivanja med skupinami in skupine ne zasedajo enake površine. Pri MDS
+se skupine nič ne prekrivajo in zasedajo približno enako površino. Metoda t-SNE najboje 
+gruči jezike. Različna besedila istega jezika so skupaj in lepo se vidijo tudi skupine jezikov.
+\begin{center}
+	\resizebox*{!}{23em}{\input{pca100.pgf}}
+\end{center}
+\begin{center}
+	\resizebox*{!}{23em}{\input{mds100.pgf}}
+\end{center}
+\begin{center}
+	\resizebox*{!}{23em}{\input{tsne100.pgf}}
+\end{center}
+
+
+\end{document}

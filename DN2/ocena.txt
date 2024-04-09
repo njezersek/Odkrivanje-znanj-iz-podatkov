@@ -1,0 +1,15 @@
+Samostojno ste zbrali ustrezna besedila. (10/10)
+Terke. (10/10)
+Niste pravilno implementirali kosinusne razdalje: v delu pod imenovalcem moramo šteti tudi tiste frekvence, ki so zgolj v enem besedilu. (3/10)
+Pravilno ste ustvarili matriko za PCA. (10/10)
+Pravilno implementirana potenčna metoda za en lastni vektor. (10/10)
+Pravilno implementirana potenčna metoda za dve lastna vektorja. (10/10)
+Pravilno implementirana projekcija podatkov. (5/5)
+Pravilno implementirana razložena varianca. (5/5)
+Primerjava z MDS na celotnih terkah. MDS ste narobe izvedli na matriki razdalj tako, da MDS znova poračuna razdalje med vrsticami matrike, kar je narobe. Potrebno bi bilo nastaviti, da se uporabijo že izračunane razdalje. (5/15)
+Naloga s t-SNE. t-SNE ste izvedli na matriki razdalj tako, da t-SNE znova poračuna razdalje med vrsticami matrike. Potrebno bi bilo nastaviti, da se uporabijo že izračunane razdalje. (3/15)
+Normalizacija matrike razdalj nima smisla in rezultate kvečjemu pokvari. (-2)
+Pri izrisih tukaj imajo enote na X in Y osi isti pomen. Smiselno bi zato fiksirati enake razdalje. Na to niste pazili. (-1)
+Točke: 68.
+Ocenjevanje: <=50: 0, <=60: 6, <=70: 7, <=80: 8, <=90: 9, >=91: 10
+Ocena: 7.

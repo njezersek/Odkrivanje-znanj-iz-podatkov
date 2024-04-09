@@ -1,0 +1,17 @@
+Implementacija multinomske logistične regresije. (30/30)
+Prikaz pravilnosti implementacije (1. del). Priloženi testi testirajo bore malo, tako da se nanje ne smemo zanašati. Prav tako ne vemo, kaj je dober rezultat za nek nabor podatkov. Tudi če poznate prave formule, še ne vemo, če je implementacija OK. Morali ste pokazati, da vaša koda najde enako rešitev, kot jo teoretično (=na roko) izračunate za nek nabor podatkov. Ali kaj sorodnega, recimo, da so rešitve, če pridobljeno uteži kvarimo, slabše glede na log-loss. Pokazati ste morali tudi pravilno delovanje regularizacije. (15/15)
+Lambda test ni prepričljiv. Bolje je direktno gledati. Poleg tega bi morali regularizacijo vključiti tudi v vaš izvorni primer. (-3)
+Prikaz pravilnosti implementacije (2. del): demonstracija, da ste gradient in cost res kompatibilna. To je na predavanjih pokazal tudi prof. Zupan. Vi ste vrednosti izračunali ročno, kar potrjuje, da koda pravilno sledi formuli. Ne vemo pa še, ali sta formuli kompatibilni. (8/15)
+Prečno preverjanje. (10/10)
+Klasifikacijska točnost. (5/5)
+Log loss. (5/5)
+Evaluacija z izborom lambde s prečnim preverjanjem. (10/10)
+Poročanje rezultatov. (+3)
+Model se dobro obnese na testnih podatkih. (10/10)
+Vaš rezultat: logloss=0.63052, CA=0.76242
+Rank (logloss): 7/73
+Rank (CA): 48/73
+Rezultat moje rešitve: softmax: logloss=0.635, CA=0.761
+Točke: 93.
+Ocenjevanje: <=50: 0, <=60: 6, <=70: 7, <=80: 8, <=90: 9, >=91: 10
+Ocena: 10.

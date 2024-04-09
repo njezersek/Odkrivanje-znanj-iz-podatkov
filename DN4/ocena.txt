@@ -1,0 +1,7 @@
+Tekmovanje z linearno regresijo, končni: 328.395, 76. mesto (lestvica: 306.245)
+Tekmovanje končni: 156.356, 20. mesto (lestvica: 156.391)
+Točkovanje kakovosti napovedi: točka za vsako sekundo pod 230 na tekmovanju.
+Točke za rezultat 156.356. (+73)
+Točke: 73.
+Ocenjevanje: <=54: 0, <=61: 6, <=69: 7, <=74: 8, <=79: 9, >79: 10
+Ocena: 8.

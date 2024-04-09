@@ -1,0 +1,125 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+
+\input{config.tex}
+\usepackage{layouts}
+\usepackage{titlesec} 
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	basicstyle=\small, 
+	language=python, 
+	breaklines, tabsize=2, 
+	frame=leftline,xleftmargin=10pt,xrightmargin=10pt,framesep=10pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jernej Jezeršek}
+\lhead{Uvod v odkrivanje znanj iz podatkov}
+\rfoot{\thepage}
+
+
+\begin{document}
+
+{\huge Domača naloga 5} \\
+{\Huge \textbf{Multinomska logistična \\regresija}} 
+
+\section*{Pravilnost implementacije}
+Pri implementaciji sem si pomagal z zapiski Softmax Regression\footnote{\url{http://deeplearning.stanford.edu/tutorial/supervised/SoftmaxRegression/}}.
+Vse formule sem pretvoril v matrično obliko (edina \texttt{for} zanka je pri prečnem preverjanju).
+
+\subsection*{Funkcija \texttt{softmax}}
+Poglejmo, da se pravilno obnaša na preprostem primeru.
+\begin{align*}
+	X &= \begin{bmatrix}
+		1 & 0 \\
+		0 & 1
+	\end{bmatrix}
+	&
+	\theta = \begin{bmatrix}
+		10 & 0 & 0 \\
+		0 & 1 & 1
+	\end{bmatrix}
+\end{align*}
+
+Vrstice matrike $X$ so primerki, stolpci pa atributi. Stolpci matrike $\theta$ pripadajo razredom, vrstice pa atributom.
+
+Iz matrike $\theta$ se vidi, da prvi atribut prispeva k večji verjetnosti za 0. razred, drugi atribut pa k večji verjetnosti za
+1. in 2. razred.
+
+Rezultat funkcije \texttt{softmax} za prvo vrstico $X$ bi moral imeti veliko verjetnost za 0. razred in maljhno za preostala dva.
+Rezultat za drugo vrstico pa bi moral biti: majhna verjetnost za 0. razred in enaka verjetnost za 1. in 2. rezred.
+
+Funkcijo sem testiral na takem in podobnih primerih, in se obnaša po po pričakovanju opisanem zgoraj.
+
+\subsection*{Funkcija \texttt{cost}}
+Ta funkcija bi morala vrniti vrednost blizu 0, če se napoved \texttt{softmax}-a ujema z oznakami $y$, sicer pa
+veliko negarivno vrednost.
+
+Uporabimo isti primer kot prej in poženemo funkcijo \texttt{cost} z različnimi verdnosti za $y$ in dobimo:
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{c | c  c }
+		$y$ & \texttt{softmax}\\ \hline
+		$\begin{bmatrix} 0 & 1 \end{bmatrix}$ & -0.6932 \\
+		$\begin{bmatrix} 0 & 2 \end{bmatrix}$ & -0.6932 \\
+		$\begin{bmatrix} 1 & 0 \end{bmatrix}$ & -20.6933 \\
+	\end{tabular}
+\end{center}
+
+Ti rezultati so smiselni, saj ima privi primerek največjo verjetnost za razred 0, drugi pa enoako verjetnost za razred 1 ali 2.
+
+
+\subsection*{Funkcija \texttt{grad}}
+Spet uporabimo isti primer, tokrat za $y$ izberemo $[1 \ 0]$ za katerega je $\theta$ najslabše prilagojena.
+
+Gradient (zaokrožen) po posameznih elementih $\theta$ je:
+\[ \begin{bmatrix}
+	-1 &  1 & 0 \\
+	1 & -0.5 & -0.5
+\end{bmatrix}\]
+
+Za dani $X$ in $y$ bi morala biti $\theta$ čim bližje:
+\[ \begin{bmatrix}
+	0 &  1 & 0 \\
+	1 & 0 & 0
+\end{bmatrix}\]
+
+Če trenutni $\theta$ prištejemo gradient, bo bližje idealni vrednosti. Zato je rezultat smiselen.
+
+\subsection*{Regularizacija}
+Pri povečevanju vpliva regularizacije ($\lambda$), vrednost \texttt{log loss} pri prečnem preverjanju na učnih podatkih počasi pada nato 
+pa spet naraste, kar je v skladu s pričakovanji.
+
+\section*{Opis reševanja napovedi}
+Podatke (\texttt{train.csv}, \texttt{test.csv}) sem s knjižnico \texttt{Pandas} in jim odstranil stolpec id. 
+V tabeli učnih podatkov sem stolpec \texttt{target} spremenil v števila od $0$ do $8$. Nato sem podatke pretvoril v \texttt{numpy} sezname.
+
+Na učnih podatkih sem izvedel prečno preverjanje ($k=5$) in dobil naslednje rezultate:
+\begin{center}
+	\begin{tabular}{c | c  c }
+		$\lambda$ & accuracy & log loss\\ \hline
+		0.0 & 0.762800 & 0.645148 \\
+		0.1 & 0.762700 & 0.645068 \\
+		0.2 & 0.762960 & 0.644904 \\
+		0.4 & 0.762500 & 0.644552 \\
+		0.8 & 0.762340 & 0.644525 \\
+		1.6 & 0.762140 & 0.644292 \\
+		3.2 & 0.762140 & 0.644163 \\
+		6.4 & 0.761680 & 0.644251
+	\end{tabular}
+\end{center}
+
+Glede na te rezultate sem za regularizacijo uporabil $\lambda = 3.2$.
+
+Za končno napoved sem model naučil na vseh učnih podatkih. Napoved modela sem shranil v \texttt{final.txt}.
+
+Program za gradnjo končnega modela porabi \textbf{9 s}.
+
+
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+
+\input{config.tex}
+\usepackage{layouts}
+\usepackage{titlesec} 
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	basicstyle=\small, 
+	language=python, 
+	breaklines, tabsize=2, 
+	frame=leftline,xleftmargin=10pt,xrightmargin=10pt,framesep=10pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jernej Jezeršek}
+\lhead{Uvod v odkrivanje znanj iz podatkov}
+\rfoot{\thepage}
+
+
+\begin{document}
+
+{\huge Domača naloga 3} \\
+{\Huge \textbf{Napovedovanje prihodov\\ avtobusov LPP}} \\
+
+\section*{Predtekmovanje}
+Vsako vožnjo sem pospisal z naslednjimi značilkami:
+\begin{itemize}
+	\item \textbf{Dan v tednu} - binarno, 7 značilk
+	\item \textbf{Ura v dnevu} - binarno, 24 značilk
+	\item \textbf{Voznik} - binarno, ena značilka za vsakega voznika
+	\item \textbf{Praznik} - binarno, ena značilka
+	\item \textbf{Šolske počitnice} - binarno, ena značilka
+	\item \textbf{Temperature pod ničlo} - binarno ena značilka
+	\item \textbf{Dan v letu} - polinomska značilka 2. stopnje
+	\item \textbf{Minute v dnevu} - polinomska značilka 4. stopnje
+	\item \textbf{Temperature, pdavine, veter} - polinomska znančilka 2. stopnje
+	\item \textbf{Dan v tednu} - polinomska značilk 2. stopnje
+\end{itemize}
+
+Za vsako voznjo sem izračunal trajanje v minutah, ki ga model poskuša napovedati.
+
+\subsubsection*{Rezultati}
+\begin{center}
+	\begin{tabular}{c | c | c}
+		\textit{program} & \textit{datoteka z napovedjo} & \textit{rezultat} \\ \hline
+		\texttt{predtekmovanje.py} & \texttt{result7.txt} & 120.13918
+	\end{tabular}
+\end{center}
+\section*{Tekmovanje}
+
+\subsubsection*{Prvi pristop:}
+Najprej sem poskusil z metodo iz predtekmovanja obravnavati vsako linijo posebej, a
+ta pristop se ni posebej dobro obnesel (verjetno zaradi prevelikega števila značilk) z rezultatom, ki je slabši od povprečja (306.89).
+
+Zato sem ohranil le naslednje značilke:
+\begin{itemize}
+	\item \textbf{Dan v tednu} - binarno, 7 značilk
+	\item \textbf{Ura v dnevu} - binarno, 24 značilk
+	\item \textbf{Voznik} - binarno, ena značilka za vsakega voznika
+	\item \textbf{Šolske počitnice} - binarno, ena značilka
+	\item \textbf{Prosti dan (praznik ali konec tedna)} - binarno, ena značilka
+	\item \textbf{Temperature pod ničlo} - binarno ena značilka
+	\item \textbf{Dež (količina padavin $>$ 1 mm)} - binarno ena značilka
+	\item \textbf{Veter (hitrost $>$ 1.5 m/s)} - binarno ena značilka
+	\item \textbf{Sneg (dež in temperature pod ničlo)} - binarno ena značilka
+\end{itemize}
+
+\subsubsection*{Drugi pristop:}
+Tokrat sem naredil le en model. Ideja je, da se en model lahko uči na vseh vožnjah in
+skuša napovedati relativno zamudo glede na povprečno trajanje vožnje.
+
+Najprej sem za vsako linijo izračunal mediano trajanja. Nato sem za vsako vožnjo
+izračunal faktor odstopanja od povprečja $k = t / \overline{t}$, kjer je $t$ dejansko trajanje, $\overline{t}$ pa mediana trajanja za linijo.
+
+Model skuša napovedati faktor odstopanja $k$.
+
+Model uporablja iste značilke, kot prejšnji.
+
+\subsubsection*{Rezultati}
+\begin{center}
+	\begin{tabular}{c | c | c}
+		\textit{program} & \textit{datoteka z napovedjo} & \textit{rezultat na lestvici} \\ \hline
+		\texttt{tekmovanje1.py} & \texttt{tesult\_t\_4.txt} & 176.86339 \\
+		\texttt{tekmovanje2.py} & \texttt{tesult\_t\_2\_2.txt} & 184.61265
+	\end{tabular}
+\end{center}
+
+\end{document}
